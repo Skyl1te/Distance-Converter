@@ -5,7 +5,6 @@ from kivy.uix.boxlayout import BoxLayout
 
 from kivy.core.window import Window
 
-# Глобальные настройки
 Window.size = (250, 200)
 Window.clearcolor = (255/255, 186/255, 3/255, 1)
 Window.title = "Converter"
@@ -31,9 +30,8 @@ class MyApp(App):
 		else:
 			self.input_data.text = ''
 
-	# Основной метод для построения программы
+			
 	def build(self):
-		# Все объекты будем помещать в один общий слой
 		box = BoxLayout(orientation='vertical')
 		box.add_widget(self.label)
 		box.add_widget(self.input_data)
@@ -44,6 +42,5 @@ class MyApp(App):
 		return box
 
 
-# Запуск проекта
 if __name__ == "__main__":
 	MyApp().run()
